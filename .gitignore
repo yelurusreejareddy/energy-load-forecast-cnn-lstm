@@ -192,3 +192,17 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Project-specific ignores
+data/
+raw_data/
+*.csv
+*.h5
+*.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.env
+venv/
