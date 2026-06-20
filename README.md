@@ -30,5 +30,3 @@ This project explores electricity consumption forecasting for the ComEd region u
 The aim is to understand how hybrid deep learning models perform on real-world energy datasets and what interpretability tools can reveal about their decisions.
 
 ---
-
-Feel free to fork, contribute, or reach out if you’re working on similar problems.
