@@ -1,32 +1,32 @@
-# ComEd Energy Load Forecasting with CNN-LSTM
+# energy-load-forecast-cnn-lstm
 
-This project explores electricity consumption forecasting for the ComEd region using a hybrid CNN-LSTM deep learning model. It integrates weather data from multiple stations and applies time-series preprocessing to improve forecast accuracy.
+Hourly electricity demand prediction for the Illinois ComEd service area using
+a hybrid CNN-LSTM deep learning model with SHAP interpretability.
 
 ## Files Included
 
-- `notebooks/Final_Project.ipynb`: Main notebook with complete data cleaning, modeling, and evaluation.
-- `notebooks/CNN_LSTM.ipynb`, `LSTM.ipynb`, `RNN.ipynb`: Model experiments and comparisons.
-- `merged_energy_weather.csv`: Final preprocessed dataset used across models.
-- `Final_Project_Report.pdf`: Full write-up including methodology, evaluation, and insights.
+- energy_load_forecast_cnn_lstm.ipynb - main notebook with full pipeline and SHAP analysis
+- cnn_lstm_model.ipynb - CNN-LSTM model experiments
+- lstm_baseline.ipynb - LSTM baseline comparison
+- rnn_baseline.ipynb - RNN baseline comparison
+- merged_energy_weather.csv - merged ComEd hourly load and weather data
+- project_report.pdf - full write-up with methodology, evaluation, and insights
 
 ## Techniques Used
 
-- Feature Engineering on weather and energy time-series
-- CNN for spatial feature extraction
+- Dataset built by parsing ComEd service area locations and merging with hourly weather data
+- Feature engineering on weather and energy time-series
+- CNN for local pattern extraction across time windows
 - LSTM for temporal sequence modeling
-- SHAP for model interpretability
+- CNN-LSTM hybrid combining both for improved accuracy
+- SHAP values to identify which weather and time features drove predictions most
 - Evaluation metrics: RMSE, MAPE
 
 ## Libraries
 
-- pandas, numpy, matplotlib, seaborn
-- scikit-learn
-- PyTorch
-- SHAP
-- tqdm
+pandas, numpy, matplotlib, seaborn, scikit-learn, PyTorch, SHAP, tqdm
 
 ## Goal
 
-The aim is to understand how hybrid deep learning models perform on real-world energy datasets and what interpretability tools can reveal about their decisions.
-
----
+To predict hourly electricity load for the ComEd Illinois service area and explain
+model decisions using SHAP, comparing deep learning architectures on the same data.
