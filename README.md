@@ -8,7 +8,7 @@ with a hybrid CNN-LSTM deep learning model, compared against LSTM and RNN baseli
 - energy_load_forecast_cnn_lstm.ipynb - main notebook with the full pipeline
 - cnn_lstm_model.ipynb - CNN-LSTM model experiments
 - lstm_baseline.ipynb - LSTM baseline comparison
-- rnn_baseline.ipynb - RNN baseline comparison
+- rnn_baseline.ipynb - RNN baseline and 2-layer CNN-LSTM comparison
 - merged_energy_weather.csv - merged ComEd hourly load and weather data
 - project_report.pdf - full write-up with methodology, evaluation, and insights
 
