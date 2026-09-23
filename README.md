@@ -24,9 +24,10 @@ with a hybrid CNN-LSTM deep learning model, compared against LSTM and RNN baseli
 
 | Model | MAPE | RMSE |
 |---|---|---|
-| CNN-LSTM | 1.40% | 205.76 MW |
+| RNN baseline | 13.42% | 2164.78 MW |
 | LSTM baseline | 3.37% | 523.51 MW |
-| RNN baseline | 7.14% | 1024.45 MW |
+| CNN-LSTM, 2-layer LSTM | 7.14% | 1024.45 MW |
+| CNN-LSTM, 3-layer LSTM (final) | 1.40% | 205.76 MW |
 
 ## Libraries
 
