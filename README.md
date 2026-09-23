@@ -1,11 +1,11 @@
 # energy-load-forecast-cnn-lstm
 
-Hourly electricity demand prediction for the Illinois ComEd service area using
-a hybrid CNN-LSTM deep learning model with SHAP interpretability.
+Team project predicting hourly electricity demand for the Illinois ComEd service area
+with a hybrid CNN-LSTM deep learning model, compared against LSTM and RNN baselines.
 
 ## Files Included
 
-- energy_load_forecast_cnn_lstm.ipynb - main notebook with full pipeline and SHAP analysis
+- energy_load_forecast_cnn_lstm.ipynb - main notebook with the full pipeline
 - cnn_lstm_model.ipynb - CNN-LSTM model experiments
 - lstm_baseline.ipynb - LSTM baseline comparison
 - rnn_baseline.ipynb - RNN baseline comparison
@@ -14,19 +14,25 @@ a hybrid CNN-LSTM deep learning model with SHAP interpretability.
 
 ## Techniques Used
 
-- Dataset built by parsing ComEd service area locations and merging with hourly weather data
-- Feature engineering on weather and energy time-series
-- CNN for local pattern extraction across time windows
-- LSTM for temporal sequence modeling
-- CNN-LSTM hybrid combining both for improved accuracy
-- SHAP values to identify which weather and time features drove predictions most
-- Evaluation metrics: RMSE, MAPE
+- Dataset built by merging 66k hourly ComEd load readings with weather data from 17 regional stations
+- Feature engineering on weather and energy time series, using 24-hour input windows
+- 1D convolution for local pattern extraction within each window
+- 3-layer LSTM for temporal sequence modeling
+- Evaluation metrics: RMSE and MAPE
+
+## Results
+
+| Model | MAPE | RMSE |
+|---|---|---|
+| CNN-LSTM | 1.40% | 205.76 MW |
+| LSTM baseline | 3.37% | 523.51 MW |
+| RNN baseline | 7.14% | 1024.45 MW |
 
 ## Libraries
 
-pandas, numpy, matplotlib, seaborn, scikit-learn, PyTorch, SHAP, tqdm
+pandas, numpy, matplotlib, seaborn, scikit-learn, PyTorch, tqdm
 
 ## Goal
 
-To predict hourly electricity load for the ComEd Illinois service area and explain
-model decisions using SHAP, comparing deep learning architectures on the same data.
+To predict hourly electricity load for the ComEd Illinois service area and compare
+deep learning architectures on the same data.
